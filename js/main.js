@@ -70,6 +70,13 @@
         body.addClass('lightbox-open');
         submit.removeAttr('disabled');
       }, 200);
+      //tratamento para envio do ga no popup do submit.
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'contato',
+        eventAction: 'enviado',
+        eventLabel: 'enviado'
+      });
     }, Math.random() * 2000);
   });
 
